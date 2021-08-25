@@ -1,23 +1,43 @@
-// HINT: You can delete this console.log after you no longer need it!
-console.log('JavaScript code has loaded!')
+let yourName = "Omar Moreta";
 
-// First, tell us your name
-let yourName = "Jane Doe" // HINT: Replace this with your own name!
+let gb = 0;
+let cc = 0;
+let sugar = 0;
+let total = 0;
 
-// We'll use these variables to track the counts of each cookie type
-let gb = 0      // Ginger bread
-let cc = 0      // Chocolate Chip
-let sugar = 0   // Sugar Sprinkle
+document.getElementById("credit").textContent = `Created by ${yourName}`;
 
-// Code to update name display 
-document.getElementById('credit').textContent = `Created by ${yourName}`
+gb = document.querySelector("#qty-gb");
+cc = document.querySelector("#qty-cc");
+sugar = document.querySelector("#qty-sugar");
+total = document.querySelector("#qty-total");
 
-// Event listener for clicks on the "+" button for Ginger Bread cookies
-document.getElementById('add-gb').addEventListener('click', function() {
-    // HINT: You can delete this console.log after you no longer need it!
-    console.log('Ginger bread + button was clicked!')
+document.getElementById("add-gb").addEventListener("click", function () {
+  gb.innerHTML = parseInt(gb.innerHTML) + 1;
+  total.innerHTML = parseInt(total.innerHTML) + 1;
+});
 
-    // TODO: Write the code to be run when the "+" button for "Ginger Bread" is clicked
-})
+document.getElementById("minus-gb").addEventListener("click", function () {
+  gb.innerHTML = parseInt(gb.innerHTML) - 1;
+  total.innerHTML = parseInt(total.innerHTML) - 1;
+});
 
-// TODO: Hook up event listeners for the rest of the buttons
+document.getElementById("add-cc").addEventListener("click", function () {
+  cc.innerHTML = parseInt(cc.innerHTML) + 1;
+  total.innerHTML = parseInt(total.innerHTML) + 1;
+});
+
+document.getElementById("minus-cc").addEventListener("click", function () {
+  cc.innerHTML = parseInt(cc.innerHTML) - 1;
+  total.innerHTML = parseInt(total.innerHTML) - 1;
+});
+
+document.getElementById("add-sugar").addEventListener("click", function () {
+  sugar.innerHTML = parseInt(sugar.innerHTML) + 1;
+  total.innerHTML = parseInt(total.innerHTML) + 1;
+});
+
+document.getElementById("minus-sugar").addEventListener("click", function () {
+  sugar.innerHTML = parseInt(sugar.innerHTML) - 1;
+  total.innerHTML = parseInt(total.innerHTML) - 1;
+});
